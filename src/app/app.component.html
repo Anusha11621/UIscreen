@@ -1,0 +1,35 @@
+<nb-layout class="mat-typography">
+  <nb-layout-header fixed fxLayout="row" fxLayoutAlign="flex-end">
+    <nb-actions size="small">
+      <nb-action icon="info-outline"> </nb-action>
+      <nb-action
+        icon="bell-outline"
+        badgeDot
+        badgePosition="top right"
+        badgeStatus="danger"
+      >
+      </nb-action>
+      <nb-action class="control-item">
+        <nb-user [name]="'username'" [size]="'medium'" [title]="'ADMIN'">
+        </nb-user>
+      </nb-action>
+    </nb-actions>
+  </nb-layout-header>
+  <nb-sidebar state="compacted" tag="sidNav" fixed>
+    <nb-menu [items]="menu"></nb-menu>
+  </nb-sidebar>
+  <nb-layout-column style="padding: 0.3rem !important">
+    <router-outlet></router-outlet>
+  </nb-layout-column>
+  <nb-layout-footer fixed>
+    <div fxLayout="row" fxLayoutAlign="center center">
+      <p>
+        &copy; Copyright {{ date }}
+        <a href="https://www.autent.in" target="_blank"
+          ><strong class="brandcolor">Autent Technology Pvt. Ltd</strong>
+        </a>
+        All Rights Received.
+      </p>
+    </div>
+  </nb-layout-footer>
+</nb-layout>
